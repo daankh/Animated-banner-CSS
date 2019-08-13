@@ -36,6 +36,60 @@ body {
     left: 50%;
 }
 
+/* Etap 5 */
+.chocolate-bar,
+.cheescake {
+    font-size: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 600px;
+
+    animation: increaseFont 3s 11s 1 both;
+}
+
+.chocolate-bar {
+    top: 25%;
+}
+
+.cheescake {
+    top: 50%;
+    font-family: 'Lobster', cursive;
+}
+
+@keyframes increaseFont {
+    0% {
+        font-size: 0;
+    }
+
+    100% {
+        font-size: 26px;
+    }
+}
+
+.sweet-roll {
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #000;
+    width: auto;
+    line-height: 1.6;
+    padding: 0 5px;
+
+    animation: show-sweet-roll 1s 14s 1 both;
+}
+
+@keyframes show-sweet-roll {
+    0% {
+        left: 15%;
+        top: -50px;
+    }
+
+    100% {
+        left: 15%;
+        top: 15%;
+    }
+}
+
 /* ---------------------- */
 /* ANIMATED ELEMETS */
 /* ---------------------- */
