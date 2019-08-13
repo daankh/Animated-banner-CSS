@@ -1,6 +1,10 @@
 /* ---------------------- */
 /* BASICS */
 /* ---------------------- */
+body {
+    background-color: #7f8c8d;
+}
+
 .banner {
     position: relative;
     width: 100%;
@@ -49,7 +53,8 @@
     transform: translate(70px, 0);
     top: 10%;
 
-    animation: one-moveDown 1s 1 both;
+    animation: one-moveDown 1s 1 both,
+        moveRight 1s 2.5s 1 both;
 }
 
 @keyframes one-moveDown {
@@ -67,7 +72,8 @@
     transform: translate(-150px, 0);
     top: 30%;
 
-    animation: two-moveDown 1s .5s 1 both;
+    animation: two-moveDown 1s .5s 1 both,
+        moveLeft 1s 3.5s 1 both;
 }
 
 
@@ -75,7 +81,8 @@
     background-color: #16a085;
     transform: translate(70px, 0);
     top: 30%;
-    animation: two-moveDown 1s .5s 1 both;
+    animation: two-moveDown 1s .5s 1 both,
+        moveRight 1s 3.5s 1 both;
 }
 
 @keyframes two-moveDown {
@@ -93,7 +100,8 @@
     transform: translate(-150px, 0);
     top: 50%;
 
-    animation: three-moveDown 1s 1s 1 both;
+    animation: three-moveDown 1s 1s 1 both,
+        moveLeft 1s 4.5s 1 both;
 }
 
 .hexagon {
@@ -101,7 +109,8 @@
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     transform: translate(70px, 0);
     top: 50%;
-    animation: three-moveDown 1s 1s 1 both;
+    animation: three-moveDown 1s 1s 1 both,
+        moveRight 1s 4.5s 1 both;
 }
 
 @keyframes three-moveDown {
@@ -119,7 +128,8 @@
     transform: translate(-150px, 0);
     top: 70%;
 
-    animation: four-moveDown 1s 1.5s 1 both;
+    animation: four-moveDown 1s 1.5s 1 both,
+        moveLeft 1s 5.5s 1 both;
 }
 
 .circle {
@@ -128,7 +138,8 @@
     transform: translate(70px, 0);
     top: 70%;
 
-    animation: four-moveDown 1s 1.5s 1 both;
+    animation: four-moveDown 1s 1.5s 1 both,
+        moveRight 1s 5.5s 1 both;
 }
 
 @keyframes four-moveDown {
@@ -142,22 +153,22 @@
 }
 
 /* General Animations */
-@keygrames moveLeft {
+@keyframes moveLeft {
     0% {
         left: 50%;
     }
 
     100% {
-        left: 20%;
+        left: 25%;
     }
 }
 
-@keygrames moveRight {
+@keyframes moveRight {
     0% {
         left: 50%;
     }
 
     100% {
-        left: 80%;
+        left: 75%;
     }
 }
