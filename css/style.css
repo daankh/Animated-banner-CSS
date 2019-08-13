@@ -1,0 +1,163 @@
+/* ---------------------- */
+/* BASICS */
+/* ---------------------- */
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #ecf0f1;
+    box-shadow: 2px 2px 2px #2c3e50;
+}
+
+.banner__text {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.shape {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+
+    left: 50%;
+}
+
+/* ---------------------- */
+/* ANIMATED ELEMETS */
+/* ---------------------- */
+
+.text--1 {
+    left: 50%;
+    transform: translate(-150px, 0);
+    top: 10%;
+
+    animation: one-moveDown 1s 1 both,
+        moveLeft 1s 2.5s 1 both;
+}
+
+.star {
+    background-color: #3498db;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: translate(70px, 0);
+    top: 10%;
+
+    animation: one-moveDown 1s 1 both;
+}
+
+@keyframes one-moveDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 10%;
+    }
+}
+
+.text--2 {
+    left: 50%;
+    transform: translate(-150px, 0);
+    top: 30%;
+
+    animation: two-moveDown 1s .5s 1 both;
+}
+
+
+.square {
+    background-color: #16a085;
+    transform: translate(70px, 0);
+    top: 30%;
+    animation: two-moveDown 1s .5s 1 both;
+}
+
+@keyframes two-moveDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+.text--3 {
+    left: 50%;
+    transform: translate(-150px, 0);
+    top: 50%;
+
+    animation: three-moveDown 1s 1s 1 both;
+}
+
+.hexagon {
+    background-color: #c0392b;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: translate(70px, 0);
+    top: 50%;
+    animation: three-moveDown 1s 1s 1 both;
+}
+
+@keyframes three-moveDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+.text--4 {
+    left: 50%;
+    transform: translate(-150px, 0);
+    top: 70%;
+
+    animation: four-moveDown 1s 1.5s 1 both;
+}
+
+.circle {
+    background-color: #f39c12;
+    border-radius: 50%;
+    transform: translate(70px, 0);
+    top: 70%;
+
+    animation: four-moveDown 1s 1.5s 1 both;
+}
+
+@keyframes four-moveDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 70%;
+    }
+}
+
+/* General Animations */
+@keygrames moveLeft {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 20%;
+    }
+}
+
+@keygrames moveRight {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
