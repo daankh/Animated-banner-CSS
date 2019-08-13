@@ -46,7 +46,8 @@ body {
     width: 600px;
 
     animation: increaseFont 3s 11s 1 both,
-        rotate360x 2s 15s 1 forwards;
+        rotate360x 2s 15s 1 forwards,
+        finish 2s 17s 1 both;
 
 }
 
@@ -78,7 +79,8 @@ body {
     padding: 0 5px;
 
     animation: show-sweet-roll 1s 14s 1 both,
-        rotate360xv2 2s 15s 1 forwards;
+        rotate360xv2 2s 15s 1 forwards,
+        finishv2 2s 17s 1 both;
 }
 
 @keyframes show-sweet-roll {
@@ -117,6 +119,28 @@ body {
 
     100% {
         transform: translate(-50%, -50%) rotateX(360deg)
+    }
+}
+
+@keyframes finish {
+    0% {
+        transform: translate(-50%, 0) rotateX(0deg)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 0) rotateX(0deg) scaleX(0)
+    }
+}
+
+@keyframes finishv2 {
+    0% {
+        transform: translate(-50%, -50%) rotateX(0deg)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotateX(0deg) scaleX(0)
     }
 }
 
