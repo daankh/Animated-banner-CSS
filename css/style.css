@@ -167,7 +167,8 @@ body {
     animation: one-moveDown 1s 1 both,
         moveRight 1s 2.5s 1 both,
         change-color-star 1s 5s 1 forwards,
-        hideInLeft--shape 2s 9s 1 forwards;
+        hideInLeft--shape 2s 9s 1 forwards,
+        rotateLeft .2s 9s 20 both;
 }
 
 @keyframes one-moveDown {
@@ -198,7 +199,8 @@ body {
     animation: two-moveDown 1s .5s 1 both,
         moveRight 1s 3s 1 both,
         change-color-square 1s 6s 1 forwards,
-        hideInRight--shape 2s 9s 1 forwards;
+        hideInRight--shape 2s 9s 1 forwards,
+        rotateRight .2s 9s 20 forwards;
 }
 
 @keyframes two-moveDown {
@@ -229,7 +231,8 @@ body {
     animation: three-moveDown 1s 1s 1 both,
         moveRight 1s 3.5s 1 both,
         change-color-hexagon 1s 7s 1 forwards,
-        hideInLeft--shape 2s 9s 1 forwards;
+        hideInLeft--shape 2s 9s 1 forwards,
+        rotateLeft .2s 9s 20 both;
 }
 
 @keyframes three-moveDown {
@@ -261,7 +264,8 @@ body {
     animation: four-moveDown 1s 1.5s 1 both,
         moveRight 1s 4s 1 both,
         change-color-circle 1s 8s 1 forwards,
-        hideInRight--shape 2s 9s 1 forwards;
+        hideInRight--shape 2s 9s 1 forwards,
+        rotateRight .2s 9s 20 both;
 }
 
 @keyframes four-moveDown {
@@ -369,5 +373,25 @@ body {
 
     100% {
         left: 175%;
+    }
+}
+
+@keyframes rotateLeft {
+    0% {
+        transform: translate(70px, 0) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(70px, 0) rotate(-360deg)
+    }
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: translate(70px, 0) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(70px, 0) rotate(360deg)
     }
 }
